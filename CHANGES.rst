@@ -4,6 +4,7 @@ Changelog
 0.7.0 (unreleased)
 ------------------
 
+* Rename @@profile -> @@author (Assembla #228) [ale-rt]
 * provide compatibility overrides [Guido A.J. Stevens]
 * Provide copies of patternslib javascript and css resources to enabling decoupling ploneintranet.theme [Guido A.J. Stevens]
 * Move links utils from plonesocial.activitystream [Bogdan Girman]
