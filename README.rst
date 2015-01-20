@@ -14,6 +14,13 @@ It has two install profiles:
 If you want to use your own provided javascript and css, run only the `minimal` profile.
 If you don't know what patternslib is, run the `default` profile.
 
+Developer note
+--------------
+
+The stylesheets and javascripts in the `default` profile are copied over from `ploneintranet.theme_`.
+To refresh those, run `make sync` and commit the changes.
+
+
 Copyright (c) Plone Foundation
 ------------------------------
 
