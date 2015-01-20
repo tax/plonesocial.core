@@ -19,8 +19,8 @@ Copyright (c) Plone Foundation
 
 This package is Copyright (c) Plone Foundation.
 
-Any contribution to this package implies consent and intent to irrevocably transfer all 
-copyrights on the code you contribute, to the `Plone Foundation`_, 
+Any contribution to this package implies consent and intent to irrevocably transfer all
+copyrights on the code you contribute, to the `Plone Foundation`_,
 under the condition that the code remains under a `OSI-approved license`_.
 
 To contribute, you need to have signed a Plone Foundation `contributor agreement`_.
