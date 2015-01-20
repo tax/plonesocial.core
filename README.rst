@@ -18,7 +18,7 @@ Developer note
 --------------
 
 The stylesheets and javascripts in the `default` profile are copied over from `ploneintranet.theme_`.
-To refresh those, run `make` and commit the changes.
+To refresh those, run `make sync` and commit the changes.
 
 
 Copyright (c) Plone Foundation
