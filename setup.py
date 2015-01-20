@@ -48,6 +48,7 @@ setup(
         'setuptools',
         # -*- Extra requirements: -*-
         'plone.api',
+        'plone.app.tiles'
     ],
     extras_require={
         'test': [
@@ -57,5 +58,7 @@ setup(
     },
     entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = Plone
     """,
 )
