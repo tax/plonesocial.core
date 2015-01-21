@@ -18,7 +18,8 @@ Developer note
 --------------
 
 The stylesheets and javascripts in the `default` profile are copied over from `ploneintranet.theme_`.
-To refresh those, run `make` and commit the changes.
+
+To refresh those, run `make sync` and commit the changes.
 
 
 Copyright (c) Plone Foundation
@@ -26,8 +27,8 @@ Copyright (c) Plone Foundation
 
 This package is Copyright (c) Plone Foundation.
 
-Any contribution to this package implies consent and intent to irrevocably transfer all 
-copyrights on the code you contribute, to the `Plone Foundation`_, 
+Any contribution to this package implies consent and intent to irrevocably transfer all
+copyrights on the code you contribute, to the `Plone Foundation`_,
 under the condition that the code remains under a `OSI-approved license`_.
 
 To contribute, you need to have signed a Plone Foundation `contributor agreement`_.
