@@ -10,3 +10,6 @@ develop-eggs/
 eggs/
 parts/
 var/
+include/
+lib/
+local/
