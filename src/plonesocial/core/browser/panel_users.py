@@ -6,7 +6,6 @@ from plone import api
 
 class Users(BrowserView):
 
-    action = '#selected-users'
     button_deselect_all = True
     button_select_all = True
     index = ViewPageTemplateFile('panel_users.pt')
@@ -32,6 +31,10 @@ class Users(BrowserView):
             )
 
         return users
+
+    def selected_users(self):
+        selected = self.request.get('users', [])
+        return [api.user.get(user) for user in selected]
 
 
 class User(Users):

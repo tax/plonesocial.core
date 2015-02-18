@@ -36,3 +36,6 @@ class Tags(BrowserView):
                 tags = [search_string] + tags
 
         return tags
+
+    def selected_tags(self):
+        return self.request.get('tags', [])

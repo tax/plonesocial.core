@@ -28,8 +28,8 @@
         </form>
 
         <form id="items"
-              tal:attributes="action view/action"
-              class="search-result users pat-inject pat-autosubmit">
+              tal:attributes="action string:${context/portal_url}/@@${view/panel_id}#selected-users"
+              class="search-result users pat-inject pat-autosubmit" data-pat-inject="source:em#selected-users-links">
           <fieldset data-pat-checklist="select: #status-user-selector .select-all; deselect: #status-user-selector .deselect-all"
                     class="checklist pat-checklist users unchecked">
             <label class="item user unchecked"
@@ -51,7 +51,13 @@
               </a>
             </label>
           </fieldset>
-
+          <em id="selected-users-links" tal:condition="view/selected_users"> —
+            <tal:loop tal:repeat="user view/selected_users">
+              <a href="#" 
+                 tal:attributes="href user/absolute_url"
+                 tal:content="python: '@' + user.getProperty('fullname')"></a>
+            </tal:loop>
+          </em>
         </form>
       </div>
 
