@@ -54,7 +54,7 @@
           <em id="selected-users-links" tal:condition="view/selected_users"> —
             <tal:loop tal:repeat="user view/selected_users">
               <a href="#" 
-                 tal:attributes="href user/absolute_url"
+                 tal:attributes="href user/absolute_url; data-userid user/id"
                  tal:content="python: '@' + user.getProperty('fullname')"></a>
             </tal:loop>
           </em>
