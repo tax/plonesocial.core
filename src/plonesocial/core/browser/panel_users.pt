@@ -58,6 +58,7 @@
                  tal:content="python: '@' + user.getProperty('fullname')"></a>
             </tal:loop>
           </em>
+          <em id="selected-users-links" tal:condition="python:not view.selected_users()"><span></span></em>
         </form>
       </div>
 

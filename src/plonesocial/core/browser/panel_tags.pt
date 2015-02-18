@@ -51,7 +51,7 @@
                  tal:content="string:#${tag}"></a>
             </tal:loop>
           </em>
-
+          <em id="selected-tags-links" tal:condition="python:not view.selected_tags()"><span></span></em>
         </form>
       </div>
 
