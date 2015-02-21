@@ -32,10 +32,6 @@ class Users(BrowserView):
 
         return users
 
-    def selected_users(self):
-        selected = self.request.get('users', [])
-        return [api.user.get(user) for user in selected]
-
 
 class User(Users):
 

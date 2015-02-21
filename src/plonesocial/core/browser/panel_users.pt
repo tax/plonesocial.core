@@ -28,8 +28,9 @@
         </form>
 
         <form id="items"
-              tal:attributes="action string:${context/portal_url}/@@${view/panel_id}#selected-users"
-              class="search-result users pat-inject pat-autosubmit" data-pat-inject="source:em#selected-users-links">
+              action="#selected-users"
+              class="search-result users pat-autosubmit pat-checklist-picker" 
+              data-pat-checklist-picker="source: label.item.user; target: em#selected-users;prepend: @">
           <fieldset data-pat-checklist="select: #status-user-selector .select-all; deselect: #status-user-selector .deselect-all"
                     class="checklist pat-checklist users unchecked">
             <label class="item user unchecked"
@@ -37,7 +38,8 @@
               <input tal:attributes="value user/id;
                                      type view/input_type;
                                      name view/input_name"/>
-              <a class="follow">
+              <a class="follow"
+                 tal:attributes="href user/absolute_url">
                 <img tal:replace="structure user/getPersonalPortrait"/>
                 <strong class="title icon-user"
                     tal:content="python:user.getProperty('fullname')" >Full name</strong>
@@ -51,14 +53,6 @@
               </a>
             </label>
           </fieldset>
-          <em id="selected-users-links" tal:condition="view/selected_users"> —
-            <tal:loop tal:repeat="user view/selected_users">
-              <a href="#" 
-                 tal:attributes="href user/absolute_url; data-userid user/id"
-                 tal:content="python: '@' + user.getProperty('fullname')"></a>
-            </tal:loop>
-          </em>
-          <em id="selected-users-links" tal:condition="python:not view.selected_users()"><span></span></em>
         </form>
       </div>
 

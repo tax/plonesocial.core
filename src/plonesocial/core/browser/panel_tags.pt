@@ -28,8 +28,10 @@
         </form>
 
         <form id="items"
-              tal:attributes="action string:${context/portal_url}/@@panel-tags#selected-tags"
-              class="search-result tags pat-inject pat-autosubmit" data-pat-inject="source:em#selected-tags-links">              
+              action="#selected-tags"
+              class="search-result tags pat-autosubmit pat-checklist-picker" 
+              data-pat-inject="source:em#selected-tags-links"
+              data-pat-checklist-picker="source: label.item.tag;target: em#selected-tags;prepend: #">
           <fieldset data-pat-checklist="select: #status-tag-selector .select-all; deselect: #status-tag-selector .deselect-all"
                     class="checklist pat-checklist tags unchecked">
 
@@ -37,21 +39,13 @@
                    tal:repeat="tag view/tags">
               <input type="checkbox" name="tags:list"
                      tal:attributes="value tag"/>
-              <a class="follow">
+              <a class="follow"
+                 tal:attributes="href string:${context/portal_url}/@@stream/tag/${tag}">
                 <strong class="title icon-tag"
                         tal:content="tag" />
               </a>
             </label>
           </fieldset>
-
-          <em id="selected-tags-links" tal:condition="view/selected_tags"> —
-            <tal:loop tal:repeat="tag view/selected_tags">
-              <a href="#" 
-                 tal:attributes="href string:${context/portal_url}/@@stream/tag/${tag}"
-                 tal:content="string:#${tag}"></a>
-            </tal:loop>
-          </em>
-          <em id="selected-tags-links" tal:condition="python:not view.selected_tags()"><span></span></em>
         </form>
       </div>
 
